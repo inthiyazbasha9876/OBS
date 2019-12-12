@@ -1,0 +1,90 @@
+<div class="row">
+    <div class="col-lg-2 col-xl-2 col-md-2 col-sm-12 col-xs-12 shadow">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <img src="assets/logo-02.svg" class="logo_image">
+            <div class="app-sidebar__user row">
+                <div class="mt-2">
+                    <span><abbr title="change profile pic">
+                            <div><img *ngIf="pic1" [src]="profilepic" height="70px" width="70px">
+
+                                <input (change)="imageCompress($event)" accept="image/*" type="file"
+                                    class="inputimage" />
+
+                            </div>
+                        </abbr>
+                        <div class="row m-2 text" *ngIf="txt">
+                            <p class="mx-auto my-auto"><b>{{initials}}</b></p>
+                        </div>
+                    </span>
+                </div>
+                <div class="ml-4 mt-2 logged">
+                    <div>{{fName}}
+                        {{lName}}</div>
+                    <div class="text-center">{{loggeduser}}</div>
+                </div>
+            </div>
+
+
+
+            <!-- Left sidebar -->
+            <aside id="basicSidebar" class="pmd-sidebar bg-light pmd-z-depth" role="navigation">
+                <ul class="nav flex-column pmd-sidebar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#hrmsmasters" role="button"
+                            aria-expanded="true" aria-controls="inbox">HRMS Masters</a>
+                        <ul class="collapse" id="hrmsmasters" data-parent="#basicSidebar">
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);">Personal
+                                    Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);">Educational
+                                    Qualification</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);">Work and
+                                    Experience</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#psamasters" role="button" aria-expanded="true"
+                            aria-controls="inbox">PSA Masters</a>
+                        <ul class="collapse" id="psamasters" data-parent="#basicSidebar">
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);">Personal
+                                    Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);">Educational
+                                    Qualification</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);">Work and
+                                    Experience</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="tms" routerLinkActive="active">TMS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);">Work and
+                            Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);">Work and
+                            Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="logout()">Logout</a>
+                    </li>
+                </ul>
+            </aside>
+
+        </div>
+    </div>
+    <div class="col-lg-10 col-xl-10 col-md-10 col-sm-12 col-xs-12">
+        <router-outlet></router-outlet>
+    </div>
+</div>
