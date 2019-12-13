@@ -21,9 +21,12 @@
                     <div>{{fName}}
                         {{lName}}</div>
                     <div class="text-center">{{loggeduser}}</div>
+
+
                 </div>
             </div>
-
+            
+            
 
 
             <!-- Left sidebar -->
@@ -31,25 +34,49 @@
                 <ul class="nav flex-column pmd-sidebar-nav">
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#hrmsmasters" role="button"
-                            aria-expanded="true" aria-controls="inbox">HRMS Masters</a>
+                            aria-expanded="true" aria-controls="inbox"><i class="fa fa-laptop"></i>&nbsp;HRMS Masters</a>
                         <ul class="collapse" id="hrmsmasters" data-parent="#basicSidebar">
                             <li class="nav-item">
-                                <a class="nav-link" href="javascript:void(0);">Personal
-                                    Information</a>
+                                <a class="nav-link" href="javascript:void(0);">Cost Center</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="javascript:void(0);">Educational
-                                    Qualification</a>
+                                <a class="nav-link" href="javascript:void(0);">Bussiness Unit</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="javascript:void(0);">Work and
-                                    Experience</a>
+                                <a class="nav-link" href="javascript:void(0);">Sub Bussiness Unit</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);">Employee Education</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);">State List</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);">Resource Type</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);">Employee Status</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);">Seperation Type</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);">Role Management</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);">Employee Designation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);">Passport Centers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);">Skills</a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#psamasters" role="button" aria-expanded="true"
-                            aria-controls="inbox">PSA Masters</a>
+                            aria-controls="inbox"><i class="fa fa-laptop"></i>&nbsp;PSA Masters</a>
                         <ul class="collapse" id="psamasters" data-parent="#basicSidebar">
                             <li class="nav-item">
                                 <a class="nav-link" href="javascript:void(0);">Personal
@@ -66,15 +93,22 @@
                         </ul>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" routerLink="hrms/dashboard" routerLinkActive="active">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="hrms/employee" routerLinkActive="active">Team-Info</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" routerLink="tms" routerLinkActive="active">TMS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0);">Work and
-                            Experience</a>
+                        <a class="nav-link" href="javascript:void(0);">PSA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0);">Work and
-                            Experience</a>
+                        <a class="nav-link" href="javascript:void(0);">RMG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);">LMS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" (click)="logout()">Logout</a>

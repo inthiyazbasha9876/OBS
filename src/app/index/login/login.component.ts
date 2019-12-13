@@ -80,16 +80,16 @@ export class LoginComponent implements OnInit {
 
       if (this.role == "ROLE_USER") {
         //this.routerNavigate.navigate([`employee/employeeedit/${this.username}`])
-        this.routerNavigate.navigate(['home']);
+        this.routerNavigate.navigate(['home/hrms/dashboard']);
       }
       else if (this.role == "ROLE_MANAGER") {
         //this.routerNavigate.navigate([`/employee`])
-        this.routerNavigate.navigate(['home']);
+        this.routerNavigate.navigate(['home/hrms/dashboard']);
 
       }
       else {
         //this.routerNavigate.navigate(['dashboard']);
-        this.routerNavigate.navigate(['home']);
+        this.routerNavigate.navigate(['home/hrms/dashboard']);
 
       }
       

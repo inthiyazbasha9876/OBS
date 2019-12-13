@@ -33,7 +33,7 @@
 }
 
 .logged{
-    font-size: 19px;
+    font-size: 17px;
     font-weight: bold;
     color:white
 }
@@ -56,15 +56,34 @@ ul a{
     color:#747474 !important;
     background: white;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 17px;
 }
 ul li ul li a{
-    font-size: 16px;
+    font-size: 15px;
+
 }
 ul a:active,ul a:focus{
     color: #1D62A7!important;
-    background-color:white;
-    border-color: #1D62A7!important;
-    border-left:5px solid;
-    border-right:5px solid;
+    background-color:#e7e7eb;
+    border-left:3px solid #1d62a7;
+}
+ul a:hover{
+    background-color: #e7e7eb;
+    border-left:3px solid #1d62a7;
+    color: #1D62A7 ;
+}
+
+.nav-item, .nav-link{
+    font-size:16px;
+    background-color: white;
+    
+}
+.nav-link.active{
+    font-size:16px;
+    background-color: #e7e7eb !important;
+    border-left:3px solid #1d62a7;
+
+}
+.navlink{
+    margin-bottom: 2px;
 }
