@@ -26,6 +26,8 @@ export class HomeComponent implements OnInit {
   constructor(private authService: AuthService,private hrms:HrmsService,private routerNavigate:Router,private ng2PicaService: Ng2PicaService) { 
     this.loggeduser=this.authService.decryptData(localStorage.getItem('UserName'));
     this.role=this.authService.decryptData(localStorage.getItem('Role'));
+    console.log("Role",this.role);
+    
     this.getImage()
   }
 
@@ -142,4 +144,11 @@ export class HomeComponent implements OnInit {
       // })
     })
   }
+  managerRole2() {
+    localStorage.removeItem("setUserRole");
+  }
+  managerRole3() {
+    localStorage.setItem("setUserRole", "true");
+  }
+
 }

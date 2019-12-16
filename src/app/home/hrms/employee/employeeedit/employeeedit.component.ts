@@ -27,7 +27,7 @@ backClicked() {
   this._location.back();
 }
 navigateTo(){
-  this.route.navigate(['dashboard']);
+  this.route.navigate(['hrms/dashboard']);
 }
 
 

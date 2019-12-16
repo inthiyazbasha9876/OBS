@@ -783,6 +783,12 @@ deleteEmpEduDetails(deleteEmpEduObj)
 {
   return this.http.post(this.host_url+"/obs/employeeEducationDetails/set",deleteEmpEduObj);
 }
+statusupdateEmpEduDetails(statusupdateEduobj)
+{
+  return this.http.post(this.host_url+"/obs/employeeEducationDetails/set",statusupdateEduobj);
+
+  // return this.http.post("http://localhost:8525/set",statusupdateEduobj);
+}
  //----Employee Education Ends------------
 
 //Employee Education Master Data Start

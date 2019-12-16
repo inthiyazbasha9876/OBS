@@ -5,7 +5,8 @@ import { HomeComponent } from './home.component';
 import { AuthGuard } from '../guards/auth.guard';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent,canActivate:[AuthGuard],children:[
+  { path: '', component: HomeComponent,canActivate:[AuthGuard],
+  children:[
     { path: 'hrms', loadChildren: () => import('./hrms/hrms.module').then(m =>m.HrmsModule ) },
     { path: 'tms', loadChildren: () => import('./timesheetmanagement/timesheetmanagement.module').then(m => m.TimesheetmanagementModule) },
     { path: 'psa', loadChildren: () => import('./psa/psa.module').then(m => m.PsaModule) },

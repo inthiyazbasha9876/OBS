@@ -1,16 +1,26 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, CanActivateChild, CanLoad, Route, UrlSegment, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
+import { CanActivate, CanActivateChild, CanLoad, Route, UrlSegment, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router, CanDeactivate } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from '../services/auth.service';
+import { HomeComponent } from '../home/home.component';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
+export class AuthGuard implements CanActivate, CanActivateChild, CanLoad, CanDeactivate<HomeComponent> {
+  canDeactivate(component: HomeComponent, currentRoute: ActivatedRouteSnapshot, currentState: RouterStateSnapshot, nextState?: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+    let value = window.confirm("Exit Anyway");
+    if (value) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
   constructor(
     private authService: AuthService,
     private routerNavigate: Router
-  ) {}
+  ) { }
 
   canActivate(): boolean {
     if (!this.authService.isAuthenticate()) {

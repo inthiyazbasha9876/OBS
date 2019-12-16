@@ -36,45 +36,30 @@
 <div class="collapse navbar-collapse" id="navbarNav">
   <ul class="navbar-nav nav-tabs emd_edt">
     <li class="nav-item" routerLinkActive="active">
-      <a class="nav-link  " routerLink="basicInfo">Basic Info</a>
+      <a class="nav-link" routerLink="basicInfo">Basic Info</a>
     </li>
-    <!-- <li class="nav-item">
-      <a class="nav-link" routerLink="onboardingdetails">OnBoarding</a>
-    </li> -->
     <li class="nav-item" routerLinkActive="active">
       <a class="nav-link" routerLink="education">Educational Summary</a>
     </li>
     <li class="nav-item" routerLinkActive="active">
-      <a class="nav-link" routerLink="experience">Professional Summary</a>
+      <a class="nav-link" routerLink="professional">Professional Summary</a>
     </li>
-    <!-- <li class="nav-item" routerLinkActive="active">
-      <a class="nav-link" routerLink="skill">Skills</a>
-    </li> -->
-    <!-- <li class="nav-item" routerLinkActive="active">
-      <a class="nav-link" routerLink="certification">Certification</a>
-    </li> -->
-    <!-- <li class="nav-item">
-      <a class="nav-link" routerLink="bankdetails">BankDetails</a>
-    </li> -->
-    <!-- <li class="nav-item">
-      <a class="nav-link" routerLink="contact">Contact</a>
-    </li> -->
+
     <li class="nav-item" routerLinkActive="active">
       <a class="nav-link" routerLink="kye">KYE</a>
     </li>
     <li class="nav-item" routerLinkActive="active">
       <a class="nav-link" routerLink="resignation">Resignation</a>
     </li>
-    <!-- <li class="nav-item" routerLinkActive="active">
-      <a class="nav-link" routerLink="projectdetails">ProjectDetails</a>
-    </li> -->
-
     <li class="nav-item" routerLinkActive="active">
-      <a class="nav-link" routerLink="dependentdetails">Dependents</a>
+      <a class="nav-link" routerLink="dependents">Dependents</a>
     </li>
   </ul>
 </div>
 </nav>
 <br>
 <h4 style="padding-left: 20px;">Employee ID: {{eid}}</h4>
+
+<div>
 <router-outlet></router-outlet>
+</div>
